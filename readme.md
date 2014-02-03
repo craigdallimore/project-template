@@ -21,5 +21,4 @@ TODO:
 -----
 
 - [ ] Code coverage
-- [ ] Travis CI
 - [ ] CasperJS tests

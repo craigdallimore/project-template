@@ -1,9 +1,5 @@
-@import "_colours.scss";
-
-// Box Sixes
-$grid: 12px;
-
-
+// Mixins
+// ----------------------------------------------------------------------------
 
 // Border
 @mixin border-radius($values) {

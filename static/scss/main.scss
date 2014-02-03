@@ -1,11 +1,15 @@
-// Vars
-@import "mixins";
-@import "breakpoints";
-@import "colours";
+// Main
+// ----------------------------------------------------------------------------
+
 
 // Libs
 @import "libs/normalize";
 
+// Vars
+@import "mixins";
+@import "placeholders";
+@import "breakpoints";
+@import "colours";
 
 // Implementation
 @import "base/common";
