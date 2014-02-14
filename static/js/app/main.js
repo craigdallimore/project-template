@@ -1,8 +1,8 @@
 // Main
 // ----------------------------------------------------------------------------
 
-define(['marionette'], function(Marionette) {
+define(['bacon', 'react'], function(Bacon, React) {
 
-  return new Marionette.Application();
+
 
 });
