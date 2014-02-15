@@ -29,8 +29,8 @@
 
 
           // test suite
-          spec:       '../../test/spec',
-          vendor:     '../../test/specrunner/js'
+          spec:   '../../test/spec',
+          vendor: '../../test/specrunner/js'
 
         },
 
@@ -65,7 +65,7 @@
         // Mocha
         mocha.setup('bdd');
 
-        require([ 'spec/main' ], function(main) {
+        require([ 'spec/main' ], function() {
 
           mocha.run();
 

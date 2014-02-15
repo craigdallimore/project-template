@@ -1,9 +1,6 @@
 // Main
 // ----------------------------------------------------------------------------
 
-define(['bacon', 'react'], function(Bacon, React) {
-
-
-  return {};
+require(['bacon', 'react'], function(Bacon, React) {
 
 });
