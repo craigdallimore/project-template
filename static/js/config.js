@@ -3,24 +3,20 @@
 
 require.config({
 
+  baseUrl: 'static/js/app/',
+
   paths: {
 
-    underscore: 'libs/underscore-min',
-    backbone:   'libs/backbone-min',
-    marionette: 'libs/backbone.marionette.min',
-    jquery:     'libs/jquery-2.1.0.min',
+    jquery: '../../bower_components/jquery-legacy/jquery',
 
   },
 
   shim: {
 
-    'underscore': { exports: '_' },
-    'jquery':     { exports: '$' },
-    'backbone':   { deps: ['underscore', 'jquery'], exports: 'Backbone' },
-    'marionette': { deps: [ 'backbone' ], exports: 'Marionette' }
+    'jquery': { exports: '$' }
 
   }
 
 });
 
-require([ 'app/main' ]);
+require([ 'main' ]);
