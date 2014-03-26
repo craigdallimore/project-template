@@ -1,0 +1,30 @@
+{
+  "name": "template",
+  "version": "0.0.0",
+  "homepage": "https://github.com/craigdallimore/project-template",
+  "authors": [
+    "craigdallimore <decoy9697@gmail.com>"
+  ],
+  "description": "Get a head start",
+  "main": "static/js/libs/",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "selectivizr": "~1.0.2",
+    "modernizr": "~2.7.2",
+    "requirejs": "~2.1.11",
+    "jquery-legacy": "jquery#1.10"
+  }
+}
+
+
