@@ -1,8 +1,7 @@
 node_modules/
+bower_components/
 static/.sass-cache/
 /.sass-cache/
 static/css/
 static/dist/
 *.swp
-index.html
-/tests/unit/*.html
