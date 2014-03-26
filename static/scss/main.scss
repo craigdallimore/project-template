@@ -1,20 +1,21 @@
 // Main
 // ----------------------------------------------------------------------------
 
-
 // Libs
-@import "libs/normalize";
+@import "vendors/_normalize";
 
 // Vars
-@import "mixins";
-@import "placeholders";
-@import "breakpoints";
-@import "colours";
+@import "helpers/_mixins";
+@import "helpers/_placeholders";
+@import "helpers/_colors";
 
 // Implementation
-@import "base/common";
-@import "base/typography";
+@import "base/_common";
+@import "base/_typography";
+@import "layout/_breakpoints";
 
 
 //@import "layout/";
+//@import "components/";
+//@import "pages/";
 //@import "theme/";

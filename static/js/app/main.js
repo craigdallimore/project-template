@@ -1,8 +1,8 @@
 // Main
 // ----------------------------------------------------------------------------
 
-define(['marionette'], function(Marionette) {
+define([ 'jquery' ], function($) {
 
-  return new Marionette.Application();
+  console.log('jQuery loaded');
 
 });
