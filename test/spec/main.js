@@ -1,4 +1,4 @@
-define([ 'app/main' ], function(Main) {
+define([ 'main' ], function(Main) {
 
   describe('defaults test suite', function() {
 
