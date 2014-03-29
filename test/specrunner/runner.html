@@ -14,37 +14,31 @@
     <div id="mocha"></div>
 
     <script src="js/mocha.js"></script>
-    <script src="../../static/js/libs/require.js"></script>
+    <script src="../../static/bower_components/requirejs/require.js"></script>
     <script>
 
       require.config({
 
-        baseUrl: '../../static/js/',
+
+        baseUrl: '../../static/js/app/',
 
         paths: {
 
           // App
-          underscore: 'libs/underscore-min',
-          backbone:   'libs/backbone-min',
-          marionette: 'libs/backbone.marionette.min',
-          jquery:     'libs/jquery-2.1.0.min',
+          jquery : '../../bower_components/jquery-legacy/jquery',
 
 
           // test suite
-          spec:       '../../test/spec',
-          vendor:     '../../test/specrunner/js'
+          spec   : '../../test/spec',
+          vendor : '../../test/specrunner/js'
 
         },
 
         shim: {
 
           // App
-          'underscore': { exports: '_' },
-          'jquery':     { exports: '$' },
-          'backbone':   { deps: ['underscore', 'jquery'], exports: 'Backbone' },
-          'marionette': { deps: [ 'backbone' ], exports: 'Marionette' },
-
-          'mocha': { exports: 'mocha' }
+          'jquery' : { exports : '$' }
+          'mocha'  : { exports : 'mocha' }
 
         }
 
