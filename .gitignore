@@ -5,3 +5,6 @@ static/.sass-cache/
 static/css/
 static/dist/
 *.swp
+.DS_Store
+.map
+.swp

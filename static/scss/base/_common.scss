@@ -1,33 +1,45 @@
-/* Globals
----------------------------------------------------------------------------- */
+// ----------------------------------------------------------------------------
+// Common
+// ----------------------------------------------------------------------------
 
+// Box sizing
+// ----------------------------------------------------------------------------
 * {
 
   @include box-sizing(border-box);
 
 }
 
+// Body
+// ----------------------------------------------------------------------------
 body {
 
-  background: $clr-bg;
-  color: $clr-body-copy;
-
+  background : $clr-bg;
+  color      : $clr-body-copy;
 
   font: {
-    size: 0.9em;
-    family: arial, helvetica, sans-serif;
+
+    size   : $text-base-font-size;
+    family : $text-default-family;
+
   }
 
+  line-height: $text-base-line-height;
+
 }
 
+// Clearfix
+// ----------------------------------------------------------------------------
 .clearfix:after {
 
-  content: "";
-  clear: both;
-  display: block;
+  content : "";
+  clear   : both;
+  display : block;
 
 }
 
+// Display
+// ----------------------------------------------------------------------------
 .hide {
 
   display: none;

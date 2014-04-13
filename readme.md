@@ -4,20 +4,13 @@ Project Scaffold
 [![Build Status](https://travis-ci.org/craigdallimore/project-template.png?branch=master)](https://travis-ci.org/craigdallimore/project-template)
 
 
-Comes with
-----------
-- jQuery
-- RequireJS
-- Underscore
-- Backbone
-- Marionette
+Sets up configuration for:
+--------------------------
+
 - Grunt
+- Angular with AMD
+- Bower
 - Mocha + Chai + Sinon in browser and CLI
 - Jade
-- Super basic node server
+- Super basic express server
 
-TODO:
------
-
-- [ ] Code coverage
-- [ ] CasperJS tests
