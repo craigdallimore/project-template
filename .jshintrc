@@ -24,6 +24,8 @@
         "Backbone",
         "angular",
         "jQuery",
+        "requirejs",
+        "module",
         "_",
         "$",
         "mocha",
