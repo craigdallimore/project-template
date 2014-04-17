@@ -1,3 +1,8 @@
+#
+# Grunt taskrunner configuration
+#
+# ----------------------------------------------------------------------------
+
 module.exports = (grunt) ->
 
   grunt.loadNpmTasks 'grunt-contrib-watch'
@@ -5,8 +10,8 @@ module.exports = (grunt) ->
 
   grunt.initConfig
     dirs:
-      scss:     'static/scss/'
-      dist:     'static/dist/'
+      scss: 'static/scss/'
+      dist: 'static/dist/'
 
     sass:
       dist:
