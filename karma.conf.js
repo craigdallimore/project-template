@@ -23,10 +23,10 @@ module.exports = function(config) {
 
       { pattern: 'static/bower_components/**/*.js',  included: false },
       { pattern: 'static/bower_components/**/*.map', included: false },
-      { pattern: 'test/**/*spec.js',       included: false },
       { pattern: 'static/js/app/**/*.js',            included: false },
+      { pattern: 'test/**/*spec.js',                 included: false },
 
-      'test/test.config.js'
+      'test/config.js'
 
     ],
 
@@ -46,7 +46,10 @@ module.exports = function(config) {
         { type : 'lcov', dir : 'test/coverage/' },
         { type : 'text', dir : 'test/coverage/' }
 
-      ]
+      ],
+
+
+      dir : 'test/coverage'
 
     },
 
@@ -86,5 +89,6 @@ module.exports = function(config) {
     singleRun: false
 
   });
+
 };
 
