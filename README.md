@@ -10,7 +10,15 @@ Sets up configuration for:
 - Grunt
 - Angular with AMD
 - Bower
-- Mocha + Chai + Sinon in browser and CLI
+- Karma
 - Jade
-- Super basic express server
+- Istanbul
+- Express 3
 
+Desirable:
+----------
+
+- Express 4 or Koa
+- Total coverage
+- Coverage badge
+- Gulp ?

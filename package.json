@@ -23,6 +23,10 @@
     "lodash"  : "2.2.x"
   },
 
-  "scripts": {}
+  "scripts": {
+
+    "test": "karma start --single-run"
+
+  }
 
 }
