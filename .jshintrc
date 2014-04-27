@@ -20,6 +20,8 @@
     "unused": true,
 
     "predef": [
+        "__dirname",
+        "process",
         "_gaq",
         "Backbone",
         "angular",

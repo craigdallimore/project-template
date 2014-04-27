@@ -18,9 +18,11 @@
   },
 
   "dependencies" : {
-    "jade"    : "*",
-    "express" : "3.x",
-    "lodash"  : "2.2.x"
+    "jade"         : "*",
+    "express"      : "4.x",
+    "morgan"       : "1.x",
+    "errorhandler" : "1.x",
+    "lodash"       : "2.2.x"
   },
 
   "scripts": {

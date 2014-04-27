@@ -1,33 +1,46 @@
+//
+// Express 4.0 starter application
+// http://scotch.io/bar-talk/expressjs-4-0-new-features-and-upgrading-from-3-0
+//
+// This starts a node webserver on either port 3000 or a number given
+// in the environments PORT variable.
+//
+// View templates are written in Jade
+// http://jade-lang.com/
+//
+// Routes are imported from server/routes.js
+//
+
 // Set up
 // ----------------------------------------------------------------------------
-var express = require('express'),
-  app       = express(),
-  port      = process.env.PORT || 3000;
+var express    = require('express'),
+  morgan       = require('morgan'),
+  errorHandler = require('errorhandler'),
+  app          = express(),
+  env          = process.env.NODE_ENV || 'development',
+  port         = process.env.PORT || 3000;
 
 // Configuration
+// - static file paths
+// - view engine
+// - logging
 // ----------------------------------------------------------------------------
-app.configure(function() {
+app.set('views', __dirname + '/server/views/');
 
-  app.use(express.static(__dirname + '/'));
-  app.use(express.static(__dirname + '/static'));
-  app.set('views', __dirname + '/server/views/');
-  app.use('view engine', 'jade');
+app.use(express.static(__dirname + '/'));
+app.use(express.static(__dirname + '/static'));
 
-});
+if (env === 'development') {
 
-app.configure('development', function() {
+  app.use(morgan('dev'));
+  app.use(errorHandler({ dumpExceptions: true, showStack: true }));
 
-  app.use(express.logger('dev'));
-  app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+} else {
 
-});
+  app.use(morgan());
+  app.use(errorHandler());
 
-app.configure('production', function() {
-
-  app.use(express.logger());
-  app.use(express.errorHandler());
-
-});
+}
 
 // Routes
 // ----------------------------------------------------------------------------
