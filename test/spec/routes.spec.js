@@ -1,16 +1,44 @@
+//
 // Routes spec
+// http://stackoverflow.com/questions/15990102/angularjs-route-unit-testing
 // ----------------------------------------------------------------------------
 
-define([ 'routes' ], function(config) {
+define([
 
-  describe('datavis routes', function() {
+  'angular',
+  'angularMocks',
+  'routes'
 
-    it('is defined', function() {
+], function(angular, mocks) {
 
-      expect(config).to.be.defined;
+  'use strict';
+
+  beforeEach(function() {
+
+    mocks.module('myApp');
+
+  });
+
+  describe('Route module', function() {
+
+    describe('/', function() {
+
+      it('uses the Index controller and the Index template', function() {
+
+        mocks.inject(function($route) {
+
+          expect($route.current).to.be['undefined'];
+
+          expect($route.routes['/'].templateUrl).to.equal('static/templates/index.html');
+          expect($route.routes['/'].controller).to.equal('Index');
+
+        });
+
+      });
 
     });
 
   });
 
 });
+

@@ -3,13 +3,35 @@
 //
 // ----------------------------------------------------------------------------
 
-define([ 'controllers/index' ], function(controller) {
+define([
 
-  describe('launch controller', function() {
+  'angular',
+  'angularMocks',
+  'controllers/index'
 
-    it('is defined', function() {
+], function(angular, mocks) {
 
-      expect(controller).to.be.defined;
+  'use strict';
+
+  beforeEach(function() {
+
+    mocks.module('myApp');
+
+  });
+
+  describe('Index controller', function() {
+
+    it('has a helloWorld value', function() {
+
+      mocks.inject(function($rootScope, $controller) {
+
+        var $scope = $rootScope.$new();
+
+        $controller('Index', { $scope: $scope });
+
+        $scope.should.have.property('helloWorld');
+
+      });
 
     });
 

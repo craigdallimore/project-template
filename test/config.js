@@ -26,6 +26,7 @@ requirejs.config({
     angular        : '../../bower_components/angular/angular.min',
     angularRoute   : '../../bower_components/angular-route/angular-route.min',
     angularAnimate : '../../bower_components/angular-animate/angular-animate.min',
+    angularMocks   : '../../bower_components/angular-mocks/angular-mocks',
     domready       : '../../bower_components/domready/ready.min',
     jquery         : '../../bower_components/jquery-legacy/jquery'
 
@@ -35,7 +36,8 @@ requirejs.config({
 
     'angular'        : { exports : 'angular' },
     'angularRoute'   : [ 'angular' ],
-    'angularAnimate' : [ 'angular' ]
+    'angularAnimate' : [ 'angular' ],
+    'angularMocks'   : { deps: [ 'angular' ], exports: 'angular.mock' }
 
   },
 

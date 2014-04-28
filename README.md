@@ -65,4 +65,5 @@ Desirable:
 - Total coverage
 - Coverage badge
 - Gulp ?
+- eslint
 - Minified env
