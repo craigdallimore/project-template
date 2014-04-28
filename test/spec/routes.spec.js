@@ -13,13 +13,13 @@ define([
 
   'use strict';
 
-  beforeEach(function() {
-
-    mocks.module('myApp');
-
-  });
-
   describe('Route module', function() {
+
+    beforeEach(function() {
+
+      mocks.module('myApp');
+
+    });
 
     describe('/', function() {
 

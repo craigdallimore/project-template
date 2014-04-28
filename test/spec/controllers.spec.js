@@ -3,7 +3,7 @@
 
 define([ 'controllers' ], function(controllers) {
 
-  describe('datavis.controllers', function() {
+  describe('myApp.controllers', function() {
 
     it('is defined', function() {
 

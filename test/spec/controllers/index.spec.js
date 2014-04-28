@@ -13,13 +13,13 @@ define([
 
   'use strict';
 
-  beforeEach(function() {
-
-    mocks.module('myApp');
-
-  });
-
   describe('Index controller', function() {
+
+    beforeEach(function() {
+
+      mocks.module('myApp');
+
+    });
 
     it('has a helloWorld value', function() {
 
@@ -30,6 +30,7 @@ define([
         $controller('Index', { $scope: $scope });
 
         $scope.should.have.property('helloWorld');
+        $scope.helloWorld.should.equal('Kaizen!');
 
       });
 

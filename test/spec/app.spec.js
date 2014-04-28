@@ -3,19 +3,19 @@
 //
 // ----------------------------------------------------------------------------
 
-define([ 'app' ], function(datavis) {
+define([ 'app' ], function(app) {
 
   describe('application', function() {
 
     it('is defined', function() {
 
-      expect(datavis).to.be.defined;
+      expect(app).to.be.defined;
 
     });
 
     it('has controllers', function() {
 
-      expect(datavis.controllers).to.be.defined;
+      expect(app.controllers).to.be.defined;
 
     });
 

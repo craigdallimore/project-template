@@ -12,9 +12,9 @@ define([ 'directives', 'services/foo' ], function(directives) {
     return {
 
       link: function (scope, el) {
-    
+
         el.text(fooFactory.foo);
-    
+
       }
 
     };
