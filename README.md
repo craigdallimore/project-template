@@ -66,4 +66,6 @@ Desirable:
 - Coverage badge
 - Gulp ?
 - eslint
-- Minified env
+- Minified output depending on environment
+- Moar docs
+- scss-lint.yml https://github.com/causes/scss-lint
