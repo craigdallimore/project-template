@@ -30,12 +30,12 @@ html.no-js(lang='en')
 
     script(src='static/bower_components/modernizr/modernizr.js')
 
-  body(ng-app="myApp")
+  body
     noscript
       p This site works better with JavaScript enabled.
 
     block content
 
-    script(src='static/bower_components/requirejs/require.js', data-main='/static/js/config')
+    script(src='static/dist/app.min.js')
 
 //- KAIZEN

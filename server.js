@@ -15,6 +15,7 @@
 // ----------------------------------------------------------------------------
 var express    = require('express'),
   morgan       = require('morgan'),
+  compression  = require('compression'),
   errorHandler = require('errorhandler'),
   app          = express(),
   env          = process.env.NODE_ENV || 'development',
@@ -25,7 +26,9 @@ var express    = require('express'),
 // - view engine
 // - logging
 // ----------------------------------------------------------------------------
+
 app.set('views', __dirname + '/server/views/');
+app.use(compression());
 
 app.use(express.static(__dirname + '/'));
 app.use(express.static(__dirname + '/static'));

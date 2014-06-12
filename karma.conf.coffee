@@ -21,12 +21,8 @@ module.exports = (config) ->
 
     files: [
 
-      { pattern: 'static/bower_components/**/*.js',  included: false }
-      { pattern: 'static/bower_components/**/*.map', included: false }
-      { pattern: 'static/js/app/**/*.js',            included: false }
-      { pattern: 'test/**/*spec.js',                 included: false }
-
-      'test/config.js'
+      { pattern: 'static/js/**/*.js', included: false }
+      { pattern: 'test/**/*spec.js',  included: false }
 
     ]
 
@@ -54,7 +50,7 @@ module.exports = (config) ->
 
     preprocessors : {
 
-      'static/js/app/**/*.js' : [ 'coverage' ]
+      'static/js/**/*.js' : [ 'coverage' ]
 
     }
 
@@ -77,8 +73,8 @@ module.exports = (config) ->
 
     browsers: [
 
-      # 'Chrome',
-      'PhantomJS'
+      'Chrome',
+      # 'PhantomJS'
 
     ]
 

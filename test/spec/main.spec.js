@@ -1,12 +1,10 @@
-// Main spec
-// ----------------------------------------------------------------------------
+var main = require('static/js/main.js');
 
-// want to define 'main' but get error re: resumeBootstrap
-define([  ], function() {
+describe('main', function() {
 
-  describe('main', function() {
+  it('exists', function() {
 
-    // not sure
+    expect(main).to.not.be['null'];
 
   });
 

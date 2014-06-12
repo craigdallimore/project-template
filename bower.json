@@ -6,10 +6,6 @@
     "craigdallimore <decoy9697@gmail.com>"
   ],
   "description": "Get a head start",
-  "main": "static/js/libs/",
-  "moduleType": [
-    "amd"
-  ],
   "license": "MIT",
   "private": true,
   "ignore": [
@@ -20,18 +16,11 @@
     "tests"
   ],
   "dependencies": {
-    "selectivizr": "~1.0.2",
-    "modernizr": "~2.7.2",
-    "requirejs": "~2.1.11",
-    "angular": "~1.2.15",
-    "angular-animate": "~1.2.15",
-    "angular-route": "~1.2.15",
-    "jquery-legacy": "jquery#1.10",
-    "font-awesome": "~4.0.3",
-    "susy": "~2.1.1",
-    "breakpoint-sass": "~2.4.2",
-    "meyer-reset": "*",
-    "domready": "~1.0.4",
-    "angular-mocks": "~1.2.16"
+    "selectivizr"     : "~1.0.2",
+    "modernizr"       : "~2.7.2",
+    "font-awesome"    : "~4.0.3",
+    "susy"            : "~2.1.1",
+    "breakpoint-sass" : "~2.4.2",
+    "meyer-reset"     : "*",
   }
 }
