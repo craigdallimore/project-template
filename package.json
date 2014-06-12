@@ -1,48 +1,38 @@
 {
-  "name"        : "ProjectTemplate",
-  "description" : "Project Template",
-  "version"     : "0.0.2",
-  "private"     : true,
-
-  "devDependencies" : {
-
-    "browserify"       : "~4.1.x",
-    "browserify-shim"  : "~3.5.x",
-    "chai"             : "~1.9.x",
-    "coffee-script"    : "~1.7.x",
-    "gulp"             : "~3.7.x",
-    "gulp-browserify"  : "~0.5.x",
-    "gulp-rename"      : "~1.2.x",
-    "gulp-ruby-sass"   : "^0.5.0",
-    "gulp-sass"        : "~0.7.1",
-    "gulp-uglify"      : "~0.3.x",
-    "gulp-util"        : "~2.2.x",
-    "gulp-zopfli"      : "^0.1.1",
-    "karma"            : "~0.10.x",
-    "karma-browserify" : "^0.2.1",
-    "karma-coverage"   : "~0.1.x",
-    "karma-mocha"      : "~0.1.x",
-    "karma-sinon-chai" : "~0.1.x",
-    "lodash"           : "~2.2.x"
-
+  "name": "ProjectTemplate",
+  "description": "Project Template",
+  "version": "0.0.2",
+  "private": true,
+  "devDependencies": {
+    "browserify": "~4.1.x",
+    "browserify-shim": "~3.5.x",
+    "chai": "~1.9.x",
+    "coffee-script": "~1.7.x",
+    "gulp": "~3.7.x",
+    "gulp-browserify": "~0.5.x",
+    "gulp-rename": "~1.2.x",
+    "gulp-ruby-sass": "^0.5.0",
+    "gulp-sass": "~0.7.1",
+    "gulp-uglify": "~0.3.x",
+    "gulp-util": "~2.2.x",
+    "gulp-zopfli": "^0.1.1",
+    "karma": "~0.10.x",
+    "karma-browserify": "^0.2.1",
+    "karma-coverage": "~0.1.x",
+    "karma-mocha": "~0.1.x",
+    "karma-sinon-chai": "~0.1.x",
+    "lodash": "~2.2.x"
   },
-
-  "dependencies" : {
-
-    "compression"  : "^1.0.6",
-    "jade"         : "*",
-    "express"      : "~4.x",
-    "morgan"       : "~1.x",
-    "errorhandler" : "~1.x",
-    "react"        : "~0.10.x",
-    "lodash"       : "~2.2.x"
-
+  "dependencies": {
+    "compression": "^1.0.6",
+    "errorhandler": "~1.x",
+    "express": "~4.x",
+    "jade": "*",
+    "lodash": "~2.2.x",
+    "morgan": "~1.x",
+    "react": "^0.10.0"
   },
-
-  "scripts" : {
-
-    "test" : "karma start --single-run"
-
+  "scripts": {
+    "test": "karma start --single-run"
   }
-
 }
