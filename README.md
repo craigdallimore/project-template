@@ -8,9 +8,8 @@ Issues
 
 - Breakpoint requires SASS 3.3 - only 3.2 is supported by libsass / node-sass / gulp-sass
 - Sourcemaps currently broken on gulp-sass: https://github.com/dlmanning/gulp-sass/issues/57
-- Tests not running - perhaps investigate https://github.com/xdissent/karma-browserify ?
 - HTML not compressed
-- Caching not set up
+- No React boilerplate exists.
 
 Requires
 --------

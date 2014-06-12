@@ -1,9 +1,11 @@
 {
-  "name": "ProjectTemplate",
-  "description": "Project Template",
-  "version": "0.0.2",
-  "private": true,
-  "devDependencies": {
+  "name"        : "ProjectTemplate",
+  "description" : "Project Template",
+  "version"     : "0.0.2",
+  "private"     : true,
+
+  "devDependencies" : {
+
     "browserify"       : "~4.1.x",
     "browserify-shim"  : "~3.5.x",
     "chai"             : "~1.9.x",
@@ -17,12 +19,16 @@
     "gulp-util"        : "~2.2.x",
     "gulp-zopfli"      : "^0.1.1",
     "karma"            : "~0.10.x",
+    "karma-browserify" : "^0.2.1",
     "karma-coverage"   : "~0.1.x",
     "karma-mocha"      : "~0.1.x",
     "karma-sinon-chai" : "~0.1.x",
     "lodash"           : "~2.2.x"
+
   },
-  "dependencies": {
+
+  "dependencies" : {
+
     "compression"  : "^1.0.6",
     "jade"         : "*",
     "express"      : "~4.x",
@@ -30,8 +36,13 @@
     "errorhandler" : "~1.x",
     "react"        : "~0.10.x",
     "lodash"       : "~2.2.x"
+
   },
-  "scripts": {
+
+  "scripts" : {
+
     "test" : "karma start --single-run"
+
   }
+
 }

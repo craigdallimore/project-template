@@ -1,4 +1,9 @@
-var main = require('static/js/main.js');
+//
+// Main
+//
+// ----------------------------------------------------------------------------
+
+var main = require('../../static/js/main.js');
 
 describe('main', function() {
 

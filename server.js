@@ -28,10 +28,13 @@ var express    = require('express'),
 // ----------------------------------------------------------------------------
 
 app.set('views', __dirname + '/server/views/');
+
 app.use(compression());
 
-app.use(express.static(__dirname + '/'));
-app.use(express.static(__dirname + '/static'));
+var oneYear = 31557600000;
+
+app.use(express.static(__dirname + '/',       { maxAge: oneYear }));
+app.use(express.static(__dirname + '/static', { maxAge: oneYear }));
 
 if (env === 'development') {
 
