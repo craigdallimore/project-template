@@ -19,7 +19,9 @@ sass       = require 'gulp-ruby-sass'
 rename     = require 'gulp-rename'
 gutil      = require 'gulp-util'
 gzip       = require 'gulp-zopfli'
+plumber    = require 'gulp-plumber'
 browserify = require 'gulp-browserify'
+livereload = require 'gulp-livereload'
 
 # Tasks relating to JS
 gulp.task 'js', ->
@@ -37,21 +39,26 @@ gulp.task 'css', ->
 
   gulp.src './static/scss/main.scss'
 
-    # note the sourcemap is appended to the output css
+  # prevent gulp-ruby-sass from killing every gorram thing on error
+  # https://github.com/floatdrop/gulp-plumber
+  .pipe plumber()
   .pipe sass
     style: 'compressed'
-    sourcemap: true
 
-
-    # --- gulp-sass style --- #
+    # There are some limitations with gulp-sass, as it is based on
+    # node-sass which is not sass 3.3 compliant yet.
+    # Sourcemaps don't work correctly and libs that require 3.3
+    # won't work yet
+    # https://github.com/dlmanning/gulp-sass/issues/57
     # sourceComments : 'map'
-    # errLogToConsole : true
-    # outputStyle    : 'compressed'
-    # includePaths   : [ 'static/scss/' ]
+    #errLogToConsole : true
+    #outputStyle     : 'compressed'
+    #includePaths    : [ 'static/scss/' ]
 
   .pipe rename 'app.css'
   .pipe gzip()
   .pipe gulp.dest './static/dist/'
+  .pipe livereload()
 
 # Watch task
 gulp.task 'watch', ->

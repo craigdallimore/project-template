@@ -9,6 +9,8 @@ $fa-font-path : '../../bower_components/font-awesome/fonts/'; // path to fonts
 
 @import '../bower_components/meyer-reset/stylesheets/_meyer-reset';
 @import '../bower_components/susy/sass/_susy';
+
+// Requires gulp-sass to work with sass 3.3
 @import '../bower_components/breakpoint-sass/stylesheets/_breakpoint';
 @import '../bower_components/font-awesome/scss/font-awesome';
 
