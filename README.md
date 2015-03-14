@@ -3,13 +3,42 @@ Project Scaffold
 
 [![Build Status](https://travis-ci.org/craigdallimore/project-template.png?branch=master)](https://travis-ci.org/craigdallimore/project-template)
 
-Issues
-------
+Yo, this is the classic never-finished project scaffold. I'll keep on poking it
+and prodding it whenever I am distracted by some hipster library or other,
+adding new bits and pulling old bits out.
 
-- Breakpoint requires SASS 3.3 - only 3.2 is supported by libsass / node-sass / gulp-sass
-- Sourcemaps currently broken on gulp-sass: https://github.com/dlmanning/gulp-sass/issues/57
-- HTML not compressed
-- No React boilerplate exists.
+Todo
+----
+- Total coverage
+- use jest instead of karma
+- fix travis
+- move script tag to bottom (moar speed!)
+- Coverage badge
+- Minified output depending on environment
+- Livereload injected in dev mode
+- Error pages when not in development mode
+- Moar docs
+- scss-lint.yml https://github.com/causes/scss-lint
+- compressed html output
+- automated testing
+- docs for:
+ - how to install node, npm etc, how to get it running
+ - developing
+ - deploying
+ - testing
+ - a better intro (explain the opinions etc)
+ - toc
+
+Keeping packages up to date:
+----------------------------
+
+When coming back to the scaffold, it might be useful to pre-emptively check
+whether any of the packages need updates:
+
+```
+npm i -g npm-check-updates
+npm-check-updates -u
+```
 
 Requires
 --------
@@ -26,51 +55,28 @@ Installation
 - Install nodeJS and NPM if they are not already installed:
 
 ` yum install nodejs npm `
-
-- Install these gems ( used for CSS preprocessing )
-
-` gem install sass compass `
+TODO: no no no, use nvm plz.
 
 - Install these global node packages
 
 ```
 npm install -g grunt-cli
-npm install -g karma
 npm install -g nodemon
 npm install -g browserify
 ```
 
 - Install local node packages
 
-` npm install
+` npm install `
 
-- Run the gulp "sass" task
+- Install bower components
 
-` gulp sass `
+` bower install `
+
+- Run the gulp "css" task
+
+` gulp css `
 
 - To start the node server
 
 ` nodemon server.js `
-
-- To start the Karma tests / coverage reporting
-
-` karma start `
-
-Sets up configuration for:
---------------------------
-
-- Gulp
-- Karma
-- Jade
-- Istanbul
-- Express 4
-
-Desirable:
-----------
-
-- Total coverage
-- Coverage badge
-- eslint
-- Minified output depending on environment
-- Moar docs
-- scss-lint.yml https://github.com/causes/scss-lint

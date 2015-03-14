@@ -1,3 +1,4 @@
+///////////////////////////////////////////////////////////////////////////////
 //
 // Express 4.0 starter application
 // http://scotch.io/bar-talk/expressjs-4-0-new-features-and-upgrading-from-3-0
@@ -5,36 +6,37 @@
 // This starts a node webserver on either port 3000 or a number given
 // in the environments PORT variable.
 //
-// View templates are written in Jade
-// http://jade-lang.com/
-//
-// Routes are imported from server/routes.js
-//
+///////////////////////////////////////////////////////////////////////////////
 
-// Set up
-// ----------------------------------------------------------------------------
-var express    = require('express'),
-  morgan       = require('morgan'),
-  compression  = require('compression'),
-  errorHandler = require('errorhandler'),
-  app          = express(),
-  env          = process.env.NODE_ENV || 'development',
-  port         = process.env.PORT || 3000;
+'use strict';
 
-// Configuration
-// - static file paths
-// - view engine
-// - logging
-// ----------------------------------------------------------------------------
+//// IMPORTS //////////////////////////////////////////////////////////////////
 
-app.set('views', __dirname + '/server/views/');
+require('babel/register'); // Support jsx and ES6 in `required` modules.
+
+var path         = require('path');
+var express      = require('express');
+var morgan       = require('morgan');
+var compression  = require('compression');
+var errorHandler = require('errorhandler');
+var serverRender = require('./src/js/server');
+
+//// APP //////////////////////////////////////////////////////////////////////
+
+var app  = express();
+var env  = process.env.NODE_ENV || 'development';
+var port = process.env.PORT || 3000;
+
+//// CONFIGURATION ////////////////////////////////////////////////////////////
 
 app.use(compression());
 
 var oneYear = 31557600000;
+var distPath = path.join(__dirname, 'src/dist');
 
-app.use(express.static(__dirname + '/',       { maxAge: oneYear }));
-app.use(express.static(__dirname + '/static', { maxAge: oneYear }));
+// Everything in src/dist will appear to be available at /
+// e.g. curl http://localhost:3000/bundle.css
+app.use(express.static(distPath, { maxAge : oneYear }));
 
 if (env === 'development') {
 
@@ -48,12 +50,23 @@ if (env === 'development') {
 
 }
 
-// Routes
-// ----------------------------------------------------------------------------
-require('./server/routes')(app);
+//// ROUTES ///////////////////////////////////////////////////////////////////
 
-// Launch
-// ----------------------------------------------------------------------------
+// Use the JSX
+app.use('/', serverRender);
+
+//// Use the static files
+
+//// Errors
+app.use(function(err, req, res) {
+  res.status(500);
+  // TODO: Send a proper error page when not in development.
+  res.send('<pre>' + err.stack + '</pre>');
+});
+
+//// LAUNCH ///////////////////////////////////////////////////////////////////
+
 app.listen(port);
 console.log('Node server listening on port ' + port);
 
+///////////////////////////////////////////////////////////////////////////////

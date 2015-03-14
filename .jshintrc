@@ -1,56 +1,20 @@
 {
-    "expr": true,
+  "browser"  : true,
+  "eqeqeq"   : true,
+  "esnext"   : true,
+  "expr"     : true,
+  "latedef"  : true,
+  "newcap"   : false,
+  "nonew"    : true,
+  "quotmark" : true,
+  "undef"    : true,
+  "unused"   : true,
+  "strict"   : true,
 
-    "eqeqeq": true,
+  "mocha"    : true,
+  "node"     : true,
 
-    "es3": true,
-
-    "indent": 2,
-
-    "latedef": true,
-
-    "newcap": true,
-
-    "quotmark": "single",
-
-    "undef": true,
-
-    "browser": true,
-
-    "jquery": true,
-
-    "unused": true,
-
-    "predef": [
-        "__dirname",
-        "process",
-        "_gaq",
-        "Backbone",
-        "angular",
-        "jQuery",
-        "requirejs",
-        "module",
-        "_",
-        "$",
-        "mocha",
-        "sinon",
-        "chai",
-        "describe",
-        "assert",
-        "should",
-        "it",
-        "define",
-        "require",
-        "beforeEach",
-        "afterEach",
-        "expect",
-        "spyOn",
-        "loadFixtures",
-        "clearAjaxRequests",
-        "getJSONFixture",
-        "loadJSONFixtures",
-        "mostRecentAjaxRequest",
-        "runs",
-        "waitsFor"
-    ]
+  "predef": []
 }
+
+
